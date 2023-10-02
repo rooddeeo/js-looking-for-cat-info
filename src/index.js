@@ -25,7 +25,7 @@ breedSelect.addEventListener('change', selectedValue);
 function selectedValue(event) {
   const breedId = event.target.value;
   console.log(breedId);
-
+  
   fetchCatByBreed(BASE_URL, breedId)
     .then(data => {
       console.log(data);
