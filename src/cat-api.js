@@ -11,14 +11,12 @@ function fetchCatByBreed(BASE_URL, breedId, API_KEY) {
   const headers = {
     'x-api-key': API_KEY,
   };
-  return fetch(
-    `${BASE_URL}images/search?breed_ids=${breedId}&api_key=${API_KEY}`,
-    { headers }
-  ).then(response => {
+  return fetch(`${BASE_URL}images/search?breed_ids=${breedId}`, {
+    headers,
+  }).then(response => {
     if (!response.ok) {
       throw new Error(`Ошибка загрузки данных: ${response.status}`);
     }
-    // console.log(response.json());
     return response.json();
   });
 }
