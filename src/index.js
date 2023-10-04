@@ -54,7 +54,8 @@ function selectedValue(event) {
       </li>`;
 
       catInfo.insertAdjacentHTML('beforeend', addCatInfo);
-
+      
+      error.classList.add('hidden');
       catInfo.classList.remove('hidden');
       loader.classList.add('hidden');
     })
