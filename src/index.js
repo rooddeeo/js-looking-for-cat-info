@@ -52,7 +52,6 @@ function selectedValue(event) {
       <p class="cat__description">${data[0].breeds[0].description}</p>
       <p class="cat__temperament"><strong>Temperament:</strong> ${data[0].breeds[0].temperament}</p>
       </li>`;
-
       catInfo.insertAdjacentHTML('beforeend', addCatInfo);
       
       error.classList.add('hidden');
